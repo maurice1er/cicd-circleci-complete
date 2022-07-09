@@ -37,7 +37,10 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - compile
+      - compile 
       - test:
-          requires:
+          requires: 
             - compile
+      - analyse:
+          requires:
+            - test
